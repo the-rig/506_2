@@ -107,14 +107,6 @@ dat_raw <- bind_rows(dat_prep_A, dat_prep_B) %>%
   mutate(obs = 1:50)
 
 
-dat_raw %>%
-  gather(key = item, value = score, -obs) %>%
-  group_by(obs) %>%
-  summarise(total_score = sum(score)) %>%
-  ggplot(aes(x = obs, y = total_score)) +
-    geom_point()
-
-
 ```
 
 ## Graph of These Data
