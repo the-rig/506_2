@@ -18,7 +18,7 @@ N <- 25
 # simulate "avoidancease", a latent variable with a random scale
 attitude = 5*runif(N,0,1)
 
-# simulate latent responses to 9 questions about avoidance for baseline
+# simulate latent responses to 9 questions about attitude for baseline
 b_gun = .2
 e_gun = rnorm(N,0,1)
 l_gun = b_gun*attitude+e_gun
@@ -43,7 +43,7 @@ dat_prep_A <- data_frame(l_gun, l_stl, l_att, l_fgt, l_skip)
 
 # simulate "attitude", a latent variable with a random scale
 attitude = runif(N,0,1)
-# simulate latent responses to 9 questions about avoidance for baseline
+# simulate latent responses to 9 questions about attitude for baseline
 b_gun = .2
 e_gun = rnorm(N,0,1)
 l_gun = b_gun*attitude+e_gun
